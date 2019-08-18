@@ -15,10 +15,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Debug 모드 설정
+        setDebugMode()
+        
+
+        
         return true
     }
-
+    
+    // Debug 모드 설정
+    func setDebugMode() {
+        // Release Mode (DEBUG: 개발환경, RELEASE: 배포환경)
+        DebugMode.releaseMode(Mode.DEBUG)
+        
+        // Server Mode (DEVELOP: 개발서버, PRODUCT: 실서버)
+        DebugMode.apiMode(ServerMode.DEVELOP)
+        
+        // AppLog (true: Show Log, false: Hide Log)
+        DebugMode.showLog(true)
+    }
+    
+    
+    ///----------------------------------------------------
+    /// Life cycle
+    ///----------------------------------------------------
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
