@@ -23,6 +23,7 @@ extension String {
         return String(first).uppercased() + dropFirst()
     }
     
+    
     ///----------------------------------------------------
     /// Language Localized
     ///----------------------------------------------------

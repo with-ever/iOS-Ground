@@ -26,6 +26,13 @@
 		9F133B20230A086F00399304 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F133B1F230A086F00399304 /* UIApplicationExtension.swift */; };
 		9F133B22230A088300399304 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F133B21230A088300399304 /* DoubleExtension.swift */; };
 		9F133B24230A0E6000399304 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F133B23230A0E6000399304 /* URLExtension.swift */; };
+		9F16A40D230AC38800466301 /* ClipBoardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A40C230AC38800466301 /* ClipBoardUtils.swift */; };
+		9F16A40F230AC3F300466301 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A40E230AC3F300466301 /* Color.swift */; };
+		9F16A413230ACB8000466301 /* CustomUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A412230ACB8000466301 /* CustomUserDefaults.swift */; };
+		9F16A415230AFC2200466301 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A414230AFC2200466301 /* UserDefaultsExtension.swift */; };
+		9F16A419230B13A100466301 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A418230B13A100466301 /* DateExtension.swift */; };
+		9F2AC3C8230C430300F1647B /* EncodingDecodingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2AC3C7230C430300F1647B /* EncodingDecodingExtension.swift */; };
+		9F2AC3CA230C4A9A00F1647B /* FormatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2AC3C9230C4A9A00F1647B /* FormatExtension.swift */; };
 		DED80212B073040E040BC53C /* libPods-ground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF1125F9E03723CBEF30715 /* libPods-ground.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +80,13 @@
 		9F133B1F230A086F00399304 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		9F133B21230A088300399304 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		9F133B23230A0E6000399304 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		9F16A40C230AC38800466301 /* ClipBoardUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipBoardUtils.swift; sourceTree = "<group>"; };
+		9F16A40E230AC3F300466301 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		9F16A412230ACB8000466301 /* CustomUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUserDefaults.swift; sourceTree = "<group>"; };
+		9F16A414230AFC2200466301 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		9F16A418230B13A100466301 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		9F2AC3C7230C430300F1647B /* EncodingDecodingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingDecodingExtension.swift; sourceTree = "<group>"; };
+		9F2AC3C9230C4A9A00F1647B /* FormatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatExtension.swift; sourceTree = "<group>"; };
 		A3F14358CF1651F1A5986CA7 /* Pods-ground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ground.release.xcconfig"; path = "Target Support Files/Pods-ground/Pods-ground.release.xcconfig"; sourceTree = "<group>"; };
 		BEF1125F9E03723CBEF30715 /* libPods-ground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30CDC97A1B4709239BDD2C7 /* Pods-ground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ground.debug.xcconfig"; path = "Target Support Files/Pods-ground/Pods-ground.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +186,7 @@
 				9F0C3DC223097947003A58D4 /* application */,
 				9F0C3DC7230986D1003A58D4 /* base */,
 				9F0C3DCC23098755003A58D4 /* extension */,
+				9F16A40B230AC33D00466301 /* utils */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -214,8 +229,22 @@
 				9F133B1F230A086F00399304 /* UIApplicationExtension.swift */,
 				9F133B21230A088300399304 /* DoubleExtension.swift */,
 				9F133B23230A0E6000399304 /* URLExtension.swift */,
+				9F16A414230AFC2200466301 /* UserDefaultsExtension.swift */,
+				9F16A418230B13A100466301 /* DateExtension.swift */,
+				9F2AC3C7230C430300F1647B /* EncodingDecodingExtension.swift */,
+				9F2AC3C9230C4A9A00F1647B /* FormatExtension.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		9F16A40B230AC33D00466301 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				9F16A40C230AC38800466301 /* ClipBoardUtils.swift */,
+				9F16A40E230AC3F300466301 /* Color.swift */,
+				9F16A412230ACB8000466301 /* CustomUserDefaults.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		F3909B09F6B1E329E5BA1B41 /* Frameworks */ = {
@@ -389,12 +418,19 @@
 				9F133B24230A0E6000399304 /* URLExtension.swift in Sources */,
 				62AF9CC22306D74E00E3D26B /* ViewController.swift in Sources */,
 				9F133B1C230A069900399304 /* AVPlayerExtension.swift in Sources */,
+				9F16A40D230AC38800466301 /* ClipBoardUtils.swift in Sources */,
+				9F16A419230B13A100466301 /* DateExtension.swift in Sources */,
+				9F16A413230ACB8000466301 /* CustomUserDefaults.swift in Sources */,
 				9F0C3DC9230986F6003A58D4 /* BaseViewController.swift in Sources */,
 				9F133B18230A058E00399304 /* IntExtension.swift in Sources */,
 				9F0C3DCE23098770003A58D4 /* StringExtension.swift in Sources */,
+				9F2AC3CA230C4A9A00F1647B /* FormatExtension.swift in Sources */,
+				9F16A40F230AC3F300466301 /* Color.swift in Sources */,
 				9F0C3DC623097974003A58D4 /* DebugMode.swift in Sources */,
 				9F133B20230A086F00399304 /* UIApplicationExtension.swift in Sources */,
+				9F16A415230AFC2200466301 /* UserDefaultsExtension.swift in Sources */,
 				9F133B1E230A070D00399304 /* CGFloatExtension.swift in Sources */,
+				9F2AC3C8230C430300F1647B /* EncodingDecodingExtension.swift in Sources */,
 				9F133B1A230A067200399304 /* EncodableExtension.swift in Sources */,
 				9F0C3DCB2309872C003A58D4 /* BaseTableViewCell.swift in Sources */,
 				62AF9CC02306D74E00E3D26B /* AppDelegate.swift in Sources */,
