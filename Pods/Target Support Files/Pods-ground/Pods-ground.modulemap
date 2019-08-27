@@ -1,4 +1,4 @@
-module Pods_ground {
+framework module Pods_ground {
   umbrella header "Pods-ground-umbrella.h"
 
   export *

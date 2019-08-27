@@ -10,11 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var customView: UIView!
+    @IBOutlet weak var imgTemp: TImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
 }
 
