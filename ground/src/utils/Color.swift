@@ -10,6 +10,10 @@ import UIKit
 
 class Color: UIColor {
     
+    public static func getKeyColor() -> UIColor {
+        return UIColor(red:0.96, green:0.71, blue:0.25, alpha:1.0)
+    }
+    
     ///----------------------------------------------------
     /// SNS
     ///----------------------------------------------------

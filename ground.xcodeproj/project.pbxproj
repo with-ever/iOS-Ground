@@ -35,6 +35,8 @@
 		9F81BC75233330A6005AF2C4 /* HomeTopBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81BC74233330A6005AF2C4 /* HomeTopBannerTableViewCell.swift */; };
 		9F81BC77233330B0005AF2C4 /* HomeFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81BC76233330B0005AF2C4 /* HomeFilterTableViewCell.swift */; };
 		9F81BC79233330BE005AF2C4 /* HomePostingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81BC78233330BE005AF2C4 /* HomePostingTableViewCell.swift */; };
+		9FA0D363235EF8A800D48226 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0D362235EF8A800D48226 /* AlarmViewController.swift */; };
+		9FA0D365235EFBFC00D48226 /* TNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0D364235EFBFC00D48226 /* TNavigationBar.swift */; };
 		9FA7F38A23156A8E0089A2E8 /* AVPlayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7F37D23156A8D0089A2E8 /* AVPlayerExtension.swift */; };
 		9FA7F38B23156A8E0089A2E8 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7F37E23156A8D0089A2E8 /* CGFloatExtension.swift */; };
 		9FA7F38C23156A8E0089A2E8 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7F37F23156A8D0089A2E8 /* IntExtension.swift */; };
@@ -114,6 +116,8 @@
 		9F81BC74233330A6005AF2C4 /* HomeTopBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopBannerTableViewCell.swift; sourceTree = "<group>"; };
 		9F81BC76233330B0005AF2C4 /* HomeFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterTableViewCell.swift; sourceTree = "<group>"; };
 		9F81BC78233330BE005AF2C4 /* HomePostingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostingTableViewCell.swift; sourceTree = "<group>"; };
+		9FA0D362235EF8A800D48226 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		9FA0D364235EFBFC00D48226 /* TNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNavigationBar.swift; sourceTree = "<group>"; };
 		9FA7F37C23156A5E0089A2E8 /* ground-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ground-Bridging-Header.h"; sourceTree = "<group>"; };
 		9FA7F37D23156A8D0089A2E8 /* AVPlayerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerExtension.swift; sourceTree = "<group>"; };
 		9FA7F37E23156A8D0089A2E8 /* CGFloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
@@ -310,6 +314,7 @@
 		9F621A5A2332DF7200A9BD85 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				9FA0D35D235EF54900D48226 /* alarm */,
 				9F621A5B2332DF8300A9BD85 /* launchscreen */,
 				9F621A5E2332E0D800A9BD85 /* main */,
 			);
@@ -516,6 +521,30 @@
 			path = row;
 			sourceTree = "<group>";
 		};
+		9FA0D35D235EF54900D48226 /* alarm */ = {
+			isa = PBXGroup;
+			children = (
+				9FA0D35F235EF56E00D48226 /* storyboard */,
+				9FA0D35E235EF56200D48226 /* viewcontroller */,
+			);
+			path = alarm;
+			sourceTree = "<group>";
+		};
+		9FA0D35E235EF56200D48226 /* viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				9FA0D362235EF8A800D48226 /* AlarmViewController.swift */,
+			);
+			path = viewcontroller;
+			sourceTree = "<group>";
+		};
+		9FA0D35F235EF56E00D48226 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
 		9FA7F39723156A940089A2E8 /* codable */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +582,7 @@
 				9FA7F3C323156B2B0089A2E8 /* TImageView.swift */,
 				9FA7F3C223156B2B0089A2E8 /* TLabel.swift */,
 				9FA7F3C6231575DF0089A2E8 /* TToast.swift */,
+				9FA0D364235EFBFC00D48226 /* TNavigationBar.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -747,8 +777,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA0D365235EFBFC00D48226 /* TNavigationBar.swift in Sources */,
 				9F81BC75233330A6005AF2C4 /* HomeTopBannerTableViewCell.swift in Sources */,
 				9FA7F3A823156AE80089A2E8 /* AnimationExtension.swift in Sources */,
+				9FA0D363235EF8A800D48226 /* AlarmViewController.swift in Sources */,
 				9FA7F3BB23156AFE0089A2E8 /* SystemUtils.swift in Sources */,
 				9F81BC79233330BE005AF2C4 /* HomePostingTableViewCell.swift in Sources */,
 				9F621A662332E23300A9BD85 /* MainTabBarViewController.swift in Sources */,

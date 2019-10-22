@@ -1,18 +1,19 @@
 //
-//  MainViewController.swift
+//  AlarmViewController.swift
 //  ground
 //
-//  Created by TED on 19/09/2019.
+//  Created by TED on 2019/10/22.
 //  Copyright © 2019 WithEver. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: BaseViewController {
+class AlarmViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
     }
 
 }
