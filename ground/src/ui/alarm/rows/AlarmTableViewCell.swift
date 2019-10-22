@@ -1,14 +1,14 @@
 //
-//  HomeTopBannerTableViewCell.swift
+//  AlarmTableViewCell.swift
 //  ground
 //
-//  Created by TED on 19/09/2019.
+//  Created by TED on 2019/10/23.
 //  Copyright © 2019 WithEver. All rights reserved.
 //
 
 import UIKit
 
-class HomeTopBannerTableViewCell: BaseTableViewCell {
+class AlarmTableViewCell: BaseTableViewCell {
 
     // MARK: views
     
@@ -43,4 +43,5 @@ class HomeTopBannerTableViewCell: BaseTableViewCell {
     public func setData() {
 
     }
+
 }

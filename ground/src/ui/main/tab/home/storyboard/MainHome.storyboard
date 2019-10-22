@@ -16,18 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9y-bz-q7n" customClass="TNavigationBar" customModule="ground" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="TBA-UR-uEU"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="style">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eMy-ul-CYz">
                                 <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                                 <color key="backgroundColor" red="0.94867008924484253" green="0.94938892126083374" blue="0.94878143072128296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -513,12 +501,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1y7-1c-rXT" firstAttribute="trailing" secondItem="H9y-bz-q7n" secondAttribute="trailing" id="1y1-Nn-el7"/>
+                            <constraint firstItem="eMy-ul-CYz" firstAttribute="top" secondItem="1y7-1c-rXT" secondAttribute="top" constant="56" id="Ev3-cd-q4k"/>
                             <constraint firstItem="eMy-ul-CYz" firstAttribute="leading" secondItem="1y7-1c-rXT" secondAttribute="leading" id="HBk-EQ-bbb"/>
-                            <constraint firstItem="H9y-bz-q7n" firstAttribute="top" secondItem="1y7-1c-rXT" secondAttribute="top" id="QO6-PK-6ku"/>
                             <constraint firstItem="1y7-1c-rXT" firstAttribute="trailing" secondItem="eMy-ul-CYz" secondAttribute="trailing" id="Se4-K0-e2e"/>
-                            <constraint firstItem="eMy-ul-CYz" firstAttribute="top" secondItem="H9y-bz-q7n" secondAttribute="bottom" id="elo-iK-gT8"/>
-                            <constraint firstItem="H9y-bz-q7n" firstAttribute="leading" secondItem="1y7-1c-rXT" secondAttribute="leading" id="h22-43-Lju"/>
                             <constraint firstAttribute="bottom" secondItem="eMy-ul-CYz" secondAttribute="bottom" id="lph-In-HVT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1y7-1c-rXT"/>

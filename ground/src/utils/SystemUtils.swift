@@ -21,6 +21,16 @@ class SystemUtils {
     // Screen size
     public static var screenWidth: CGFloat { return UIScreen.main.bounds.size.width }
     public static var screenHeight: CGFloat { return UIScreen.main.bounds.size.height }
+    
+    // Status Bar
+    public static var statusBarHeight: CGFloat {
+        let statusBarSize = UIApplication.shared.statusBarFrame.size
+        return statusBarSize.height
+    }
+    public static var statusBarWidth: CGFloat {
+        let statusBarSize = UIApplication.shared.statusBarFrame.size
+        return statusBarSize.width
+    }
 }
 
 extension SystemUtils {

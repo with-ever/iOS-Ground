@@ -19,7 +19,7 @@ class LaunchScreenViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        NavigationUtils.rootView(storyBoard: "Main", viewControllerName: "MainNavigationController")
+        rootView(storyBoard: "Main", viewControllerName: "MainNavigationController")
     }
 
 }

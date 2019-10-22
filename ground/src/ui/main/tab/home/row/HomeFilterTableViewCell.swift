@@ -10,15 +10,38 @@ import UIKit
 
 class HomeFilterTableViewCell: BaseTableViewCell {
 
+    // MARK: views
+    
+    
+    // MARK: variable
+    private var indexPath: IndexPath!
+    
+    // MARK: delegate
+    
+    
+    ///----------------------------------------------------
+    /// Initialize
+    ///----------------------------------------------------
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        initLanguage()
+        initLayout()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    private func initLanguage() {
+        
     }
+    
+    private func initLayout() {
+        
+    }
+    
+    
+    ///----------------------------------------------------
+    /// Data
+    ///----------------------------------------------------
+    public func setData() {
 
+    }
+    
 }

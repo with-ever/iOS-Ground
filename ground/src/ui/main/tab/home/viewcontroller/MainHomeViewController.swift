@@ -38,9 +38,8 @@ class MainHomeViewController: BaseViewController {
     }
     
     private func initLayout() {
-//        // Navigation Bar
-//        setBackNavigationStyle(title: "ExternalWebView")
-//        useSwipeBackScreen()
+        // Navigation Bar
+        setMainNavigationBar(delegate: self)
         
         // TableView - delegate
         tableHome.delegate = self
@@ -58,6 +57,18 @@ class MainHomeViewController: BaseViewController {
 }
 
 
+///----------------------------------------------------
+/// TNavigationBarDelegate
+///----------------------------------------------------
+extension MainHomeViewController: TNavigationBarDelegate {
+    func actionLeftButton() {
+        
+    }
+    
+    func actionRightButton() {
+        pushView(storyBoard: "Alarm", viewControllerName: "AlarmViewController")
+    }
+}
 
 
 ///----------------------------------------------------
