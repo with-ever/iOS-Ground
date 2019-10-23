@@ -27,7 +27,7 @@ extension UIView {
     }
     
     // Shadow
-    public func shadowLine(color: UIColor = UIColor.lightGray, radius: CGFloat = 1.0, opacity: Float = 1.0, offset: CGSize = CGSize.zero) {
+    public func shadow(color: UIColor = UIColor.lightGray, radius: CGFloat = 1.0, opacity: Float = 1.0, offset: CGSize = CGSize.zero) {
         self.layer.masksToBounds = false
         self.layer.shadowColor = color.cgColor
         self.layer.shadowRadius = radius

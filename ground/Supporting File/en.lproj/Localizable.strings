@@ -8,7 +8,7 @@
 "write_navigation_cancel" = "Cancel";
 "write_navigation_register" = "Register";
 
-"alarm_title" = "NOTICE";
-"alarm_sub_title"  = "Check for new notifications.";
-"alarm_tab_my_post"  = "My posts";
-"alarm_tab_other_posts"  = "Other posts";
+"notice_title" = "NOTICE";
+"notice_sub_title"  = "Check for new notifications.";
+"notice_tab_my_post"  = "My posts";
+"notice_tab_other_posts"  = "Other posts";

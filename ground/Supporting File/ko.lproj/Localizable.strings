@@ -8,7 +8,7 @@
 "write_navigation_cancel" = "취소";
 "write_navigation_register" = "등록";
 
-"alarm_title" = "알림";
-"alarm_sub_title"  = "새로운 알림을 확인해주세요";
-"alarm_tab_my_post"  = "나의 포스트";
-"alarm_tab_other_posts"  = "다른 사람 포스트";
+"notice_title" = "알림";
+"notice_sub_title"  = "새로운 알림을 확인해주세요";
+"notice_tab_my_post"  = "나의 포스트";
+"notice_tab_other_posts"  = "다른 사람 포스트";

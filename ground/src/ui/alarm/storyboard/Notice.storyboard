@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Alarm View Controller-->
+        <!--Notice View Controller-->
         <scene sceneID="LLZ-41-kfT">
             <objects>
-                <viewController storyboardIdentifier="AlarmViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zsy-cM-kdv" customClass="AlarmViewController" customModule="ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoticeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zsy-cM-kdv" customClass="NoticeViewController" customModule="ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vwr-Tq-XXO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AlarmHeaderTableViewCell" rowHeight="172" id="asF-g0-ow2" customClass="AlarmHeaderTableViewCell" customModule="ground" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NoticeHeaderTableViewCell" rowHeight="172" id="asF-g0-ow2" customClass="NoticeHeaderTableViewCell" customModule="ground" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="172"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="asF-g0-ow2" id="HMM-Jw-ILA">
@@ -151,9 +151,11 @@
                                             <outlet property="labelOtherPosts" destination="6ZY-Tu-927" id="Sbw-Uf-Q0x"/>
                                             <outlet property="labelSubTitle" destination="LKq-QP-xj8" id="ljO-p7-RjS"/>
                                             <outlet property="labelTitle" destination="7YF-9W-9fS" id="RLM-Ls-ZYK"/>
+                                            <outlet property="viewMyPosts" destination="dgV-OZ-PAY" id="uko-i7-I7G"/>
+                                            <outlet property="viewOtherPosts" destination="w2S-ja-9SG" id="bOB-O1-enW"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AlarmTableViewCell" rowHeight="123" id="LDv-lo-nCj" customClass="AlarmTableViewCell" customModule="ground" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NoticeTableViewCell" rowHeight="123" id="LDv-lo-nCj" customClass="NoticeTableViewCell" customModule="ground" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="200" width="414" height="123"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LDv-lo-nCj" id="Pfp-if-ivd">
@@ -164,8 +166,8 @@
                                                     <rect key="frame" x="20" y="6" width="374" height="104.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaX-tk-Noq">
-                                                            <rect key="frame" x="16" y="16" width="48" height="24"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <rect key="frame" x="16" y="16" width="52" height="24"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -221,6 +223,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="labelCompanyName" destination="OYG-AS-Oal" id="coD-uN-sxf"/>
+                                            <outlet property="labelContents" destination="HAO-fE-85Z" id="dit-tr-EGJ"/>
+                                            <outlet property="labelTitle" destination="kaX-tk-Noq" id="STw-xF-yKw"/>
+                                            <outlet property="labelUserName" destination="b7c-lw-bRw" id="Cl3-e3-Y4b"/>
+                                            <outlet property="viewCard" destination="yl3-Dg-8Tb" id="fbg-pK-Rc0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -234,6 +243,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ySx-ag-pgg"/>
                     </view>
+                    <connections>
+                        <outlet property="tableNotice" destination="ZcG-9X-iYH" id="Ej9-hi-0Xq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTl-in-0sH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
