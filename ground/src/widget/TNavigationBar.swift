@@ -17,6 +17,8 @@ let NAVIGATION_BAR_HEIGHT: CGFloat = 56
 
 class TNavigationBar: UIView {
 
+    var imgMainNotice: UIImageView?
+    
     var style: TNavigationBarStyle = TNavigationBarStyle.Main
     var navigationWidth: CGFloat = 0
     var navigationHeight: CGFloat = 0
@@ -64,14 +66,15 @@ extension TNavigationBar {
     private func setTitle(style: TitleStyle) {
         switch style {
         case .main:
-            let title: UILabel = UILabel.init(frame: CGRect.init(x: navigationHeight,
-                                                                 y: SystemUtils.statusBarHeight,
-                                                                 width: navigationWidth - navigationHeight - navigationHeight,
-                                                                 height: navigationHeight))
-            title.textAlignment = .center
-            title.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
-            title.textColor = Color.white
-            title.text = "Ground"
+            let height: CGFloat = 20
+            let width: CGFloat = 329 * height / 76
+            let marginX: CGFloat = ((navigationWidth - width) / 2)
+            let marginY: CGFloat = ((navigationHeight - height) / 2) + SystemUtils.statusBarHeight
+            let title: UIImageView = UIImageView.init(frame: CGRect.init(x: marginX,
+                                                                         y: marginY,
+                                                                         width: width,
+                                                                         height: height))
+            title.image = UIImage.init(named: "ic_main_logo")
             addSubview(title)
         }
     }
@@ -85,11 +88,13 @@ extension TNavigationBar {
         case .menu:
             // imageview
             let imgWidth: CGFloat = 40
-            let margin: CGFloat = ((navigationHeight - imgWidth) / 2)
-            let img: UIImageView = UIImageView.init(frame: CGRect.init(x: margin,
-                                                                       y: margin + SystemUtils.statusBarHeight,
+            let imgHeight: CGFloat = imgWidth * 96 / 102
+            let marginX: CGFloat = ((navigationHeight - imgWidth) / 2)
+            let marginY: CGFloat = ((navigationHeight - imgHeight) / 2) + SystemUtils.statusBarHeight
+            let img: UIImageView = UIImageView.init(frame: CGRect.init(x: marginX,
+                                                                       y: marginY,
                                                                        width: imgWidth,
-                                                                       height: imgWidth))
+                                                                       height: imgHeight))
             img.image = UIImage.init(named: "temp_slide_menu")!
             addSubview(img)
             
@@ -105,27 +110,26 @@ extension TNavigationBar {
             
         case .back:
             // imageview
-            let imgWidth: CGFloat = 20
-            let imgHeight: CGFloat = 40
-            let imgMarginX: CGFloat = 10
-            let imgMarginY: CGFloat = ((navigationHeight - imgHeight) / 2) + SystemUtils.statusBarHeight
+            let imgWidth: CGFloat = 12
+            let imgHeight: CGFloat = imgWidth * 76 / 42
+            let imgMarginX: CGFloat = 22
+            let imgMarginY: CGFloat = ((navigationHeight - imgHeight) / 2) + SystemUtils.statusBarHeight - 5
             let img: UIImageView = UIImageView.init(frame: CGRect.init(x: imgMarginX,
                                                                        y: imgMarginY,
                                                                        width: imgWidth,
                                                                        height: imgHeight))
-            img.backgroundColor = Color.red
+            img.image = UIImage.init(named: "ic_back")
             addSubview(img)
             
-            // back button title
-            let backTitle: UILabel = UILabel.init(frame: CGRect.init(x: imgWidth + imgMarginX + 10,
-                                                                     y: SystemUtils.statusBarHeight,
-                                                                     width: 10,
-                                                                     height: navigationHeight))
-            backTitle.textColor = UIColor(red:0.98, green:0.87, blue:0.70, alpha:1.0)
-            backTitle.font = UIFont.systemFont(ofSize: 20, weight: .black)
-            backTitle.text = "Ground"
-            backTitle.sizeToFit()
-            backTitle.frame.size.height = navigationHeight
+            // back title image
+            let titleWidth: CGFloat = 69
+            let titleHeight: CGFloat = titleWidth * 58 / 251
+            let titleMarginY: CGFloat = ((navigationHeight - titleHeight) / 2) + SystemUtils.statusBarHeight - 5
+            let backTitle: UIImageView = UIImageView.init(frame: CGRect.init(x: imgWidth + imgMarginX + 10,
+                                                                             y: titleMarginY,
+                                                                             width: titleWidth,
+                                                                             height: titleHeight))
+            backTitle.image = UIImage.init(named: "ic_back_text")
             addSubview(backTitle)
             
             // button
@@ -176,15 +180,16 @@ extension TNavigationBar {
         switch style {
         case .alarm:
             // imageview
-            let imgWidth: CGFloat = 40
-            let margin: CGFloat = ((navigationHeight - imgWidth) / 2)
-            let imgX: CGFloat = navigationWidth - margin - imgWidth
-            let img: UIImageView = UIImageView.init(frame: CGRect.init(x: imgX,
-                                                                       y: margin + SystemUtils.statusBarHeight,
-                                                                       width: imgWidth,
-                                                                       height: imgWidth))
-            img.image = UIImage.init(named: "temp_alarm")!
-            addSubview(img)
+            let imgWidth: CGFloat = 20
+            let imgHeight: CGFloat = imgWidth * 120 / 96
+            let marginX: CGFloat = navigationWidth - ((navigationHeight - imgWidth) / 2) - imgWidth
+            let marginY: CGFloat = ((navigationHeight - imgHeight) / 2) + SystemUtils.statusBarHeight
+            imgMainNotice = UIImageView.init(frame: CGRect.init(x: marginX,
+                                                                y: marginY,
+                                                                width: imgWidth,
+                                                                height: imgHeight))
+            imgMainNotice?.image = GroundImage.shared.icNotice(status: .off)
+            addSubview(imgMainNotice!)
             
             // button
             let button: UIButton = UIButton.init(frame: CGRect.init(x: navigationWidth - navigationHeight,

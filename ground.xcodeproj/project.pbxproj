@@ -65,6 +65,7 @@
 		9FA7F3C423156B2B0089A2E8 /* TLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7F3C223156B2B0089A2E8 /* TLabel.swift */; };
 		9FA7F3C523156B2B0089A2E8 /* TImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7F3C323156B2B0089A2E8 /* TImageView.swift */; };
 		9FA7F3C7231575DF0089A2E8 /* TToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7F3C6231575DF0089A2E8 /* TToast.swift */; };
+		9FF8D68D2361214000D3D0B2 /* GroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D68C2361214000D3D0B2 /* GroundImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +154,7 @@
 		9FA7F3C223156B2B0089A2E8 /* TLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLabel.swift; sourceTree = "<group>"; };
 		9FA7F3C323156B2B0089A2E8 /* TImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TImageView.swift; sourceTree = "<group>"; };
 		9FA7F3C6231575DF0089A2E8 /* TToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TToast.swift; sourceTree = "<group>"; };
+		9FF8D68C2361214000D3D0B2 /* GroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundImage.swift; sourceTree = "<group>"; };
 		A3F14358CF1651F1A5986CA7 /* Pods-ground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ground.release.xcconfig"; path = "Target Support Files/Pods-ground/Pods-ground.release.xcconfig"; sourceTree = "<group>"; };
 		AA35BA1C6025F2BD8AF3A6DB /* Pods_ground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30CDC97A1B4709239BDD2C7 /* Pods-ground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ground.debug.xcconfig"; path = "Target Support Files/Pods-ground/Pods-ground.debug.xcconfig"; sourceTree = "<group>"; };
@@ -600,6 +602,7 @@
 				9FA7F3C223156B2B0089A2E8 /* TLabel.swift */,
 				9FA7F3C6231575DF0089A2E8 /* TToast.swift */,
 				9FA0D364235EFBFC00D48226 /* TNavigationBar.swift */,
+				9FF8D68C2361214000D3D0B2 /* GroundImage.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -813,6 +816,7 @@
 				9FA7F3A923156AE80089A2E8 /* ViewExtension.swift in Sources */,
 				9F0C3DC9230986F6003A58D4 /* BaseViewController.swift in Sources */,
 				9F621A8A2332E31900A9BD85 /* MainMyViewController.swift in Sources */,
+				9FF8D68D2361214000D3D0B2 /* GroundImage.swift in Sources */,
 				9FA7F38C23156A8E0089A2E8 /* IntExtension.swift in Sources */,
 				9FA7F3BA23156AFE0089A2E8 /* ClipBoardUtils.swift in Sources */,
 				9FA7F3BE23156AFE0089A2E8 /* CustomUserDefaults.swift in Sources */,

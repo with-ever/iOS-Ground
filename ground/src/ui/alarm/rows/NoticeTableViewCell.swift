@@ -38,7 +38,7 @@ class NoticeTableViewCell: BaseTableViewCell {
     
     private func initLayout() {
         viewCard.drawRoundBorder(color: Color.clear, borderWidth: 0.0, radius: 7)
-        viewCard.shadow(color: Color.lightGray, radius: 7, opacity: 0.15, offset: CGSize.init(width: 1, height: 1))
+        viewCard.shadow(color: Color.lightGray, radius: 7, opacity: 0.2, offset: CGSize.init(width: 2, height: 2))
     }
     
     
