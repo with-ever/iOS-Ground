@@ -8,11 +8,24 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    ///----------------------------------------------------
+    /// Swipe back screen
+    ///----------------------------------------------------
+    public func useSwipeBackScreen() {
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+    }
+    
+    public func disableUseSwipeBackScreen() {
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
 }
 

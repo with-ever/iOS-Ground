@@ -49,6 +49,11 @@ class MainHomeViewController: BaseViewController {
         
         // TableView - contents
         tableHome.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
+        
+        // TableView - register
+        tableHome.register(UINib.init(nibName: CELL_COMMON_FILTER, bundle: nil), forCellReuseIdentifier: CELL_COMMON_FILTER)
+        tableHome.register(UINib.init(nibName: CELL_POSTING_TEXT, bundle: nil), forCellReuseIdentifier: CELL_POSTING_TEXT)
+        tableHome.register(UINib.init(nibName: CELL_POSTING_IMAGE, bundle: nil), forCellReuseIdentifier: CELL_POSTING_IMAGE)
     }
     
     private func initData() {
@@ -71,6 +76,41 @@ extension MainHomeViewController: TNavigationBarDelegate {
 }
 
 
+
+///----------------------------------------------------
+/// TableView - CommonFilterDelegate
+///----------------------------------------------------
+extension MainHomeViewController: CommonFilterDelegate {
+    func actionFilter() {
+        self.view.makeToast("필터 선택")
+    }
+}
+
+///----------------------------------------------------
+/// TableView - PostingTextDelegate, PostingImageDelegate
+///----------------------------------------------------
+extension MainHomeViewController: PostingTextDelegate, PostingImageDelegate {
+    func actionPostingDetail(indexPath: IndexPath) {
+        self.view.makeToast("포스팅 상세")
+    }
+    
+    func actionLike(indexPath: IndexPath) {
+        self.view.makeToast("Like")
+    }
+    
+    func actionComment(indexPath: IndexPath) {
+        self.view.makeToast("Comment")
+    }
+    
+    func actionShare(indexPath: IndexPath) {
+        self.view.makeToast("Share")
+    }
+    
+    func actionBookmark(indexPath: IndexPath) {
+        self.view.makeToast("Bookmark")
+    }
+}
+
 ///----------------------------------------------------
 /// TableView - UITableViewDelegate
 ///----------------------------------------------------
@@ -86,7 +126,6 @@ extension MainHomeViewController: UITableViewDataSource {
      * table row 갯수
      */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return addressList.count
         switch section {
         case 0:
             return 1
@@ -107,18 +146,31 @@ extension MainHomeViewController: UITableViewDataSource {
         let index = indexPath.row as Int
         
         switch section {
+        // 탑 베너
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTopBannerTableViewCell", for: indexPath) as! HomeTopBannerTableViewCell
-//            cell.indexPath = indexPath
             return cell
+            
+        //필터
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeFilterTableViewCell", for: indexPath) as! HomeFilterTableViewCell
-            //            cell.indexPath = indexPath
+            let cell = tableView.dequeueReusableCell(withIdentifier: CELL_COMMON_FILTER, for: indexPath) as! CommonFilterTableViewCell
+            cell.delegate = self
             return cell
+
+        // 포스팅
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HomePostingTableViewCell", for: indexPath) as! HomePostingTableViewCell
-            //            cell.indexPath = indexPath
-            return cell
+            if index % 2 == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: CELL_POSTING_TEXT, for: indexPath) as! PostingTextTableViewCell
+                cell.delegate = self
+                cell.setData(indexPath: indexPath)
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: CELL_POSTING_IMAGE, for: indexPath) as! PostingImageTableViewCell
+                cell.delegate = self
+                cell.setData(indexPath: indexPath)
+                return cell
+            }
+            
         default:
             return UITableViewCell()
         }
