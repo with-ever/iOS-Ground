@@ -23,12 +23,8 @@
 		9F1C5DC82362166000B48769 /* CommonFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F1C5DC72362166000B48769 /* CommonFilterTableViewCell.xib */; };
 		9F1C5DCA2362173F00B48769 /* CommonFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C5DC92362173F00B48769 /* CommonFilterTableViewCell.swift */; };
 		9F2A2F7823744970007133A7 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A2F7723744970007133A7 /* DropDownView.swift */; };
-		9F2A2F7A2374499B007133A7 /* DropDownTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A2F792374499B007133A7 /* DropDownTableView.swift */; };
-		9F2A2F7E237449FD007133A7 /* DropDownItemForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A2F7C237449FD007133A7 /* DropDownItemForm.swift */; };
-		9F2A2F7F237449FD007133A7 /* DropDownConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A2F7D237449FD007133A7 /* DropDownConfiguration.swift */; };
 		9F2A2F8223744B9F007133A7 /* DropDownTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A2F8123744B9F007133A7 /* DropDownTitle.swift */; };
 		9F2A2F8423744BAA007133A7 /* DropDownTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2A2F8323744BAA007133A7 /* DropDownTitle.xib */; };
-		9F2A2F8623745961007133A7 /* DropDownDefaultConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A2F8523745961007133A7 /* DropDownDefaultConfiguration.swift */; };
 		9F2A2F88237459D6007133A7 /* PostingTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A2F87237459D6007133A7 /* PostingTextTableViewCell.swift */; };
 		9F2A2F8A237459E1007133A7 /* PostingTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2A2F89237459E1007133A7 /* PostingTextTableViewCell.xib */; };
 		9F2A2F8C23745C5F007133A7 /* PostingImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A2F8B23745C5F007133A7 /* PostingImageTableViewCell.swift */; };
@@ -48,6 +44,7 @@
 		9F621A8A2332E31900A9BD85 /* MainMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F621A892332E31900A9BD85 /* MainMyViewController.swift */; };
 		9F621A8C2332E3DD00A9BD85 /* NavigationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F621A8B2332E3DD00A9BD85 /* NavigationUtils.swift */; };
 		9F81BC75233330A6005AF2C4 /* HomeTopBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81BC74233330A6005AF2C4 /* HomeTopBannerTableViewCell.swift */; };
+		9F9EE83F237508440068C210 /* DropDownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9EE83E237508440068C210 /* DropDownTableViewCell.xib */; };
 		9FA0D363235EF8A800D48226 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0D362235EF8A800D48226 /* NoticeViewController.swift */; };
 		9FA0D365235EFBFC00D48226 /* TNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0D364235EFBFC00D48226 /* TNavigationBar.swift */; };
 		9FA0D367235F797100D48226 /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FA0D366235F797100D48226 /* Notice.storyboard */; };
@@ -78,6 +75,8 @@
 		9FA7F3C423156B2B0089A2E8 /* TLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7F3C223156B2B0089A2E8 /* TLabel.swift */; };
 		9FA7F3C523156B2B0089A2E8 /* TImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7F3C323156B2B0089A2E8 /* TImageView.swift */; };
 		9FA7F3C7231575DF0089A2E8 /* TToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7F3C6231575DF0089A2E8 /* TToast.swift */; };
+		9FD3C8CE237480EF00A06AA4 /* DropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3C8CD237480EF00A06AA4 /* DropDownTableViewCell.swift */; };
+		9FD3C8D22374940200A06AA4 /* DropDownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3C8D12374940200A06AA4 /* DropDownView.xib */; };
 		9FF8D68D2361214000D3D0B2 /* GroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D68C2361214000D3D0B2 /* GroundImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -121,12 +120,8 @@
 		9F1C5DC72362166000B48769 /* CommonFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonFilterTableViewCell.xib; sourceTree = "<group>"; };
 		9F1C5DC92362173F00B48769 /* CommonFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFilterTableViewCell.swift; sourceTree = "<group>"; };
 		9F2A2F7723744970007133A7 /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
-		9F2A2F792374499B007133A7 /* DropDownTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownTableView.swift; sourceTree = "<group>"; };
-		9F2A2F7C237449FD007133A7 /* DropDownItemForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownItemForm.swift; sourceTree = "<group>"; };
-		9F2A2F7D237449FD007133A7 /* DropDownConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownConfiguration.swift; sourceTree = "<group>"; };
 		9F2A2F8123744B9F007133A7 /* DropDownTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownTitle.swift; sourceTree = "<group>"; };
 		9F2A2F8323744BAA007133A7 /* DropDownTitle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownTitle.xib; sourceTree = "<group>"; };
-		9F2A2F8523745961007133A7 /* DropDownDefaultConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownDefaultConfiguration.swift; sourceTree = "<group>"; };
 		9F2A2F87237459D6007133A7 /* PostingTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingTextTableViewCell.swift; sourceTree = "<group>"; };
 		9F2A2F89237459E1007133A7 /* PostingTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostingTextTableViewCell.xib; sourceTree = "<group>"; };
 		9F2A2F8B23745C5F007133A7 /* PostingImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -146,6 +141,7 @@
 		9F621A892332E31900A9BD85 /* MainMyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMyViewController.swift; sourceTree = "<group>"; };
 		9F621A8B2332E3DD00A9BD85 /* NavigationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtils.swift; sourceTree = "<group>"; };
 		9F81BC74233330A6005AF2C4 /* HomeTopBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopBannerTableViewCell.swift; sourceTree = "<group>"; };
+		9F9EE83E237508440068C210 /* DropDownTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownTableViewCell.xib; sourceTree = "<group>"; };
 		9FA0D362235EF8A800D48226 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		9FA0D364235EFBFC00D48226 /* TNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNavigationBar.swift; sourceTree = "<group>"; };
 		9FA0D366235F797100D48226 /* Notice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
@@ -180,6 +176,8 @@
 		9FA7F3C223156B2B0089A2E8 /* TLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLabel.swift; sourceTree = "<group>"; };
 		9FA7F3C323156B2B0089A2E8 /* TImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TImageView.swift; sourceTree = "<group>"; };
 		9FA7F3C6231575DF0089A2E8 /* TToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TToast.swift; sourceTree = "<group>"; };
+		9FD3C8CD237480EF00A06AA4 /* DropDownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownTableViewCell.swift; sourceTree = "<group>"; };
+		9FD3C8D12374940200A06AA4 /* DropDownView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownView.xib; sourceTree = "<group>"; };
 		9FF8D68C2361214000D3D0B2 /* GroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundImage.swift; sourceTree = "<group>"; };
 		A3F14358CF1651F1A5986CA7 /* Pods-ground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ground.release.xcconfig"; path = "Target Support Files/Pods-ground/Pods-ground.release.xcconfig"; sourceTree = "<group>"; };
 		AA35BA1C6025F2BD8AF3A6DB /* Pods_ground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,21 +391,11 @@
 		9F2A2F762374493C007133A7 /* dropdownview */ = {
 			isa = PBXGroup;
 			children = (
-				9F2A2F7B237449F2007133A7 /* config */,
+				9FD3C8CC237480D800A06AA4 /* rows */,
 				9F2A2F7723744970007133A7 /* DropDownView.swift */,
-				9F2A2F792374499B007133A7 /* DropDownTableView.swift */,
+				9FD3C8D12374940200A06AA4 /* DropDownView.xib */,
 			);
 			path = dropdownview;
-			sourceTree = "<group>";
-		};
-		9F2A2F7B237449F2007133A7 /* config */ = {
-			isa = PBXGroup;
-			children = (
-				9F2A2F8523745961007133A7 /* DropDownDefaultConfiguration.swift */,
-				9F2A2F7D237449FD007133A7 /* DropDownConfiguration.swift */,
-				9F2A2F7C237449FD007133A7 /* DropDownItemForm.swift */,
-			);
-			path = config;
 			sourceTree = "<group>";
 		};
 		9F2A2F8023744B8C007133A7 /* views */ = {
@@ -718,6 +706,15 @@
 			path = widget;
 			sourceTree = "<group>";
 		};
+		9FD3C8CC237480D800A06AA4 /* rows */ = {
+			isa = PBXGroup;
+			children = (
+				9FD3C8CD237480EF00A06AA4 /* DropDownTableViewCell.swift */,
+				9F9EE83E237508440068C210 /* DropDownTableViewCell.xib */,
+			);
+			path = rows;
+			sourceTree = "<group>";
+		};
 		F3909B09F6B1E329E5BA1B41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -839,10 +836,12 @@
 				62AF9CC72306D74F00E3D26B /* Assets.xcassets in Resources */,
 				9F1C5DC82362166000B48769 /* CommonFilterTableViewCell.xib in Resources */,
 				9F621A782332E2C900A9BD85 /* MainMy.storyboard in Resources */,
+				9F9EE83F237508440068C210 /* DropDownTableViewCell.xib in Resources */,
 				9F2A2F8A237459E1007133A7 /* PostingTextTableViewCell.xib in Resources */,
 				9F621A7A2332E2D300A9BD85 /* MainBookmark.storyboard in Resources */,
 				9F2A2F8423744BAA007133A7 /* DropDownTitle.xib in Resources */,
 				62AF9CC52306D74E00E3D26B /* Main.storyboard in Resources */,
+				9FD3C8D22374940200A06AA4 /* DropDownView.xib in Resources */,
 				9F2A2F8E23745C68007133A7 /* PostingImageTableViewCell.xib in Resources */,
 				9F621A7E2332E2E000A9BD85 /* MainSearch.storyboard in Resources */,
 				9FA0D367235F797100D48226 /* Notice.storyboard in Resources */,
@@ -934,19 +933,15 @@
 				9F0C3DC9230986F6003A58D4 /* BaseViewController.swift in Sources */,
 				9F621A8A2332E31900A9BD85 /* MainMyViewController.swift in Sources */,
 				9F2A2F88237459D6007133A7 /* PostingTextTableViewCell.swift in Sources */,
-				9F2A2F7E237449FD007133A7 /* DropDownItemForm.swift in Sources */,
-				9F2A2F8623745961007133A7 /* DropDownDefaultConfiguration.swift in Sources */,
 				9FF8D68D2361214000D3D0B2 /* GroundImage.swift in Sources */,
 				9FA7F38C23156A8E0089A2E8 /* IntExtension.swift in Sources */,
 				9FA7F3BA23156AFE0089A2E8 /* ClipBoardUtils.swift in Sources */,
 				9FA7F3BE23156AFE0089A2E8 /* CustomUserDefaults.swift in Sources */,
 				9FA7F3C7231575DF0089A2E8 /* TToast.swift in Sources */,
 				9FA7F3AA23156AE80089A2E8 /* UITableViewExtension.swift in Sources */,
-				9F2A2F7A2374499B007133A7 /* DropDownTableView.swift in Sources */,
 				9FA7F39623156A8E0089A2E8 /* DeviceExtension.swift in Sources */,
 				9FA7F38E23156A8E0089A2E8 /* DoubleExtension.swift in Sources */,
 				9FA7F39323156A8E0089A2E8 /* UserDefaultsExtension.swift in Sources */,
-				9F2A2F7F237449FD007133A7 /* DropDownConfiguration.swift in Sources */,
 				9FA7F38B23156A8E0089A2E8 /* CGFloatExtension.swift in Sources */,
 				9FA7F3C523156B2B0089A2E8 /* TImageView.swift in Sources */,
 				9FA7F39523156A8E0089A2E8 /* URLExtension.swift in Sources */,
@@ -960,6 +955,7 @@
 				9FA7F39F23156AA20089A2E8 /* EncodingDecodingExtension.swift in Sources */,
 				9F621A8C2332E3DD00A9BD85 /* NavigationUtils.swift in Sources */,
 				9F0C3DCB2309872C003A58D4 /* BaseTableViewCell.swift in Sources */,
+				9FD3C8CE237480EF00A06AA4 /* DropDownTableViewCell.swift in Sources */,
 				9F621A862332E30900A9BD85 /* MainWriteViewController.swift in Sources */,
 				9FA7F39123156A8E0089A2E8 /* UIApplicationExtension.swift in Sources */,
 				9FA7F3A023156AA20089A2E8 /* Base62.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DropDownTitleDelegate {
-    func actionDropDown(title: String)
+    func actionDropDown(title: String, isOpen: Bool)
 }
 
 class DropDownTitle: UIView {
@@ -37,10 +37,26 @@ class DropDownTitle: UIView {
         labelTitle.text = title
     }
     
-    @IBAction func actionDropDown(_ sender: Any) {
-        delegate?.actionDropDown(title: title)
-        isOpen = !isOpen
+    
+    ///----------------------------------------------------
+    /// Call Method
+    ///----------------------------------------------------
+    public func openDropDown() {
+        isOpen = true
         changeLayout()
+    }
+    
+    public func closeDropDown() {
+        isOpen = false
+        changeLayout()
+    }
+    
+    
+    ///----------------------------------------------------
+    /// Button action
+    ///----------------------------------------------------
+    @IBAction func actionDropDown(_ sender: Any) {
+        delegate?.actionDropDown(title: title, isOpen: !isOpen)
     }
 
     ///----------------------------------------------------

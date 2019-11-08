@@ -12,9 +12,11 @@ class MainBookmarkViewController: BaseViewController {
 
     @IBOutlet weak var tableBookMark: UITableView!
     @IBOutlet weak var viewDropDownTitle: UIView!
-    @IBOutlet weak var viewDropDown: UIView!
     
     var dropDownTitle: DropDownTitle!
+    var dropDownView: DropDownView!
+    
+    var lounges: [String] = []
     
     ///----------------------------------------------------
     /// Life cycle
@@ -66,13 +68,17 @@ class MainBookmarkViewController: BaseViewController {
         viewDropDownTitle.addSubview(dropDownTitle)
         
         // DropDownView
-        viewDropDown.isHidden = true
+        dropDownView = DropDownView.instanceFromNib()
+        dropDownView.delegate = self
     }
     
     private func initData() {
         // DropDownTitle
         dropDownTitle.setData(title: "Bulletin Board")
         
+        // DropDownView
+        lounges = ["Service Lounge", "IT Lounge", "Design Lounge", "Developer Lounge"]
+        dropDownView.setData(data: lounges)
     }
     
 }
@@ -92,12 +98,35 @@ extension MainBookmarkViewController: TNavigationBarDelegate {
 }
 
 
+// MARK - DropDown
 ///----------------------------------------------------
 /// DropDownTitleDelegate
 ///----------------------------------------------------
 extension MainBookmarkViewController: DropDownTitleDelegate {
-    func actionDropDown(title: String) {
-        
+    func actionDropDown(title: String, isOpen: Bool) {
+        isOpen ? openDropDown() : closeDropDown()
+    }
+    
+    func openDropDown() {
+        dropDownView.show(parentView: self.view)
+        dropDownTitle.openDropDown()
+    }
+    
+    func closeDropDown() {
+        dropDownView.hide()
+        dropDownTitle.closeDropDown()
+    }
+}
+
+extension MainBookmarkViewController: DropDownViewDelegate {
+    func actionSelectedItem(title: String?) {
+        closeDropDown()
+        dropDownTitle.setData(title: title!)
+        self.view.makeToast("\(String(describing: title!)) 라운지 선택")
+    }
+    
+    func actionBackground() {
+        closeDropDown()
     }
 }
 
@@ -105,6 +134,7 @@ extension MainBookmarkViewController: DropDownTitleDelegate {
 
 
 
+// MARK - TableView
 ///----------------------------------------------------
 /// TableView - CommonFilterDelegate
 ///----------------------------------------------------
@@ -207,3 +237,8 @@ extension MainBookmarkViewController: UITableViewDelegate {
         
     }
 }
+
+
+
+
+
