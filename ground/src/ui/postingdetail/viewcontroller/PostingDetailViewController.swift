@@ -37,7 +37,6 @@ class PostingDetailViewController: BaseViewController {
     
     private func initLayout() {
         // Navigation Bar
-//        setBackNavigationBar(delegate: <#T##TNavigationBarDelegate#>)
         useSwipeBackScreen()
     }
     
@@ -45,5 +44,69 @@ class PostingDetailViewController: BaseViewController {
         
     }
     
+    
+    ///----------------------------------------------------
+    /// Button action
+    ///----------------------------------------------------
+    @IBAction func actionBack(_ sender: Any) {
+        pushBack()
+    }
+    
+}
 
+
+///----------------------------------------------------
+/// TableView - UITableViewDelegate
+///----------------------------------------------------
+extension PostingDetailViewController: UITableViewDataSource {
+    /**
+     * Section 갯수
+     */
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    /**
+     * Section 높이
+     */
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
+    /**
+     * Section cell 세팅
+     */
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return nil
+    }
+    
+    /**
+     * table row 갯수
+     */
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //        return addressList.count
+        return 0
+    }
+    
+    /**
+     * 각 row 마다 데이터 세팅.
+     */
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let section = indexPath.section as Int
+        let index = indexPath.row as Int
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ADDRESS_SETTING, for: indexPath) as! AddressSettingTableViewCell
+        cell.indexPath = indexPath
+        return cell
+    }
+}
+
+
+///----------------------------------------------------
+/// TableView - UITableViewDelegate
+///----------------------------------------------------
+extension PostingDetailViewController: UITableViewDelegate {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+    }
 }
