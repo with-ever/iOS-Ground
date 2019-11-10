@@ -90,6 +90,8 @@
 		9FA7F3C7231575DF0089A2E8 /* TToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7F3C6231575DF0089A2E8 /* TToast.swift */; };
 		9FAD930823780EB300993883 /* CommentMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAD930723780EB300993883 /* CommentMoreTableViewCell.swift */; };
 		9FAD930A23780EBF00993883 /* CommentMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FAD930923780EBF00993883 /* CommentMoreTableViewCell.xib */; };
+		9FAD930F2378733F00993883 /* CommentList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAD930E2378733F00993883 /* CommentList.storyboard */; };
+		9FAD93112378735B00993883 /* CommentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAD93102378735B00993883 /* CommentListViewController.swift */; };
 		9FD3C8CE237480EF00A06AA4 /* DropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3C8CD237480EF00A06AA4 /* DropDownTableViewCell.swift */; };
 		9FD3C8D22374940200A06AA4 /* DropDownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3C8D12374940200A06AA4 /* DropDownView.xib */; };
 		9FF8D68D2361214000D3D0B2 /* GroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D68C2361214000D3D0B2 /* GroundImage.swift */; };
@@ -206,6 +208,8 @@
 		9FA7F3C6231575DF0089A2E8 /* TToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TToast.swift; sourceTree = "<group>"; };
 		9FAD930723780EB300993883 /* CommentMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentMoreTableViewCell.swift; sourceTree = "<group>"; };
 		9FAD930923780EBF00993883 /* CommentMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentMoreTableViewCell.xib; sourceTree = "<group>"; };
+		9FAD930E2378733F00993883 /* CommentList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommentList.storyboard; sourceTree = "<group>"; };
+		9FAD93102378735B00993883 /* CommentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListViewController.swift; sourceTree = "<group>"; };
 		9FD3C8CD237480EF00A06AA4 /* DropDownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownTableViewCell.swift; sourceTree = "<group>"; };
 		9FD3C8D12374940200A06AA4 /* DropDownView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownView.xib; sourceTree = "<group>"; };
 		9FF8D68C2361214000D3D0B2 /* GroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundImage.swift; sourceTree = "<group>"; };
@@ -458,6 +462,7 @@
 		9F621A5A2332DF7200A9BD85 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				9FAD930B2378731500993883 /* commentlist */,
 				9F9EE84023753CB50068C210 /* postingwrite */,
 				9F1C5DBE2362062000B48769 /* postingdetail */,
 				9FA0D35D235EF54900D48226 /* notice */,
@@ -791,6 +796,31 @@
 			path = widget;
 			sourceTree = "<group>";
 		};
+		9FAD930B2378731500993883 /* commentlist */ = {
+			isa = PBXGroup;
+			children = (
+				9FAD930D2378733000993883 /* storyboard */,
+				9FAD930C2378732900993883 /* viewcontroller */,
+			);
+			path = commentlist;
+			sourceTree = "<group>";
+		};
+		9FAD930C2378732900993883 /* viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				9FAD93102378735B00993883 /* CommentListViewController.swift */,
+			);
+			path = viewcontroller;
+			sourceTree = "<group>";
+		};
+		9FAD930D2378733000993883 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9FAD930E2378733F00993883 /* CommentList.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
 		9FD3C8CC237480D800A06AA4 /* rows */ = {
 			isa = PBXGroup;
 			children = (
@@ -915,6 +945,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FAD930F2378733F00993883 /* CommentList.storyboard in Resources */,
 				9F621A802332E2E700A9BD85 /* MainHome.storyboard in Resources */,
 				9F133B13230A045D00399304 /* Localizable.strings in Resources */,
 				62AF9CCA2306D74F00E3D26B /* LaunchScreen.storyboard in Resources */,
@@ -1057,6 +1088,7 @@
 				9F0C3DCB2309872C003A58D4 /* BaseTableViewCell.swift in Sources */,
 				9FD3C8CE237480EF00A06AA4 /* DropDownTableViewCell.swift in Sources */,
 				9F621A862332E30900A9BD85 /* MainWriteViewController.swift in Sources */,
+				9FAD93112378735B00993883 /* CommentListViewController.swift in Sources */,
 				9FA7F39123156A8E0089A2E8 /* UIApplicationExtension.swift in Sources */,
 				9FA7F3A023156AA20089A2E8 /* Base62.swift in Sources */,
 				9F1C5DCA2362173F00B48769 /* CommonFilterTableViewCell.swift in Sources */,

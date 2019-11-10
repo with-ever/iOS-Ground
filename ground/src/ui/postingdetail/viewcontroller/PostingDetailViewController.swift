@@ -54,7 +54,6 @@ class PostingDetailViewController: BaseViewController {
         // Keyboard
         viewComment.drawRoundBorder(color: Color.clear, borderWidth: 0.0, radius: 24)
         useKeyboardEvent(delegate: self)
-//        useKeyboard(scrollView: tablePostingDetail)
         
         // TableView - delegate
         tablePostingDetail.delegate = self
@@ -128,6 +127,7 @@ extension PostingDetailViewController: BaseKeyboardDelegate {
 
 
 
+
 // MARK: TableView
 ///----------------------------------------------------
 /// TableView - CommonFilterDelegate
@@ -135,6 +135,15 @@ extension PostingDetailViewController: BaseKeyboardDelegate {
 extension PostingDetailViewController: CommonFilterDelegate {
     func actionFilter() {
         self.view.makeToast("필터 선택")
+    }
+}
+
+///----------------------------------------------------
+/// TableView - CommentMoreDelegate
+///----------------------------------------------------
+extension PostingDetailViewController: CommentMoreDelegate {
+    func actionCommentMore() {
+        pushView(storyBoard: "CommentList", viewControllerName: "CommentListViewController")
     }
 }
 
@@ -223,6 +232,7 @@ extension PostingDetailViewController: UITableViewDataSource {
             case 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CELL_COMMENT_MORE, for: indexPath) as! CommentMoreTableViewCell
                 cell.setData(indexPath: indexPath, data: comment)
+                cell.delegate = self
                 return cell
             default:
                 let reComment = comment.recomment[index - 2]
