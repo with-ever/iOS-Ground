@@ -10,8 +10,15 @@ import UIKit
 
 class PostingDetailViewController: BaseViewController {
 
+    // MARK: views
     @IBOutlet weak var tablePostingDetail: UITableView!
+    @IBOutlet weak var viewComment: UIView!
+    @IBOutlet weak var fieldComment: UITextField!
     
+    // MARK: constraint
+    @IBOutlet weak var constraintCommentEditHeight: NSLayoutConstraint!
+    
+    // MARK: variable
     var listPostingDetail: [PostingDetailVO] = []
     var listComment: [CommentVO] = []
     
@@ -43,6 +50,11 @@ class PostingDetailViewController: BaseViewController {
     private func initLayout() {
         // Navigation Bar
         useSwipeBackScreen()
+        
+        // Keyboard
+        viewComment.drawRoundBorder(color: Color.clear, borderWidth: 0.0, radius: 24)
+        useKeyboardEvent(delegate: self)
+//        useKeyboard(scrollView: tablePostingDetail)
         
         // TableView - delegate
         tablePostingDetail.delegate = self
@@ -86,10 +98,37 @@ class PostingDetailViewController: BaseViewController {
         pushBack()
     }
     
+    @IBAction func actionCommentSend(_ sender: Any) {
+        
+    }
+    
+    @IBAction func actionCommentCamera(_ sender: Any) {
+        
+    }
 }
 
 
-// MARK - TableView
+// MARK: Keybaord
+///----------------------------------------------------
+/// BaseKeyboardDelegate
+///----------------------------------------------------
+extension PostingDetailViewController: BaseKeyboardDelegate {
+    func showKeyboard(keyboardHeight: CGFloat) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.constraintCommentEditHeight.constant = keyboardHeight
+        })
+    }
+    
+    func hideKeyboard(keyboardHeight: CGFloat) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.constraintCommentEditHeight.constant = 56
+        })
+    }
+}
+
+
+
+// MARK: TableView
 ///----------------------------------------------------
 /// TableView - CommonFilterDelegate
 ///----------------------------------------------------
