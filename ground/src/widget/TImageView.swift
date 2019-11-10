@@ -12,7 +12,7 @@ import PINCache
 
 class TImageView: UIImageView {
 
-    public func load(url: String, crop: Crop = Crop.CENTER_CROP, style: Style = Style.RECTANGLE) {
+    public func load(url: String?, crop: Crop = Crop.CENTER_CROP, style: Style = Style.RECTANGLE) {
         var placeHolderImage = UIImage.init(named: "ic_default_rectangle")
         switch crop {
         case .CENTER_CROP:
@@ -28,12 +28,13 @@ class TImageView: UIImageView {
         }
         
         // Load image
+        if url?.isEmpty ?? true {return}
         self.pin_updateWithProgress = true
-        pin_setImage(from: URL(string: url), placeholderImage: placeHolderImage)
+        pin_setImage(from: URL(string: url!), placeholderImage: placeHolderImage)
     }
 }
 
-///----------------------------------------------------
+///--------------------------------------------------
 /// Cache
 ///----------------------------------------------------
 extension UIImageView {

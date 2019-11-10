@@ -45,7 +45,7 @@ class CommonFilterTableViewCell: BaseTableViewCell {
     ///----------------------------------------------------
     /// Data
     ///----------------------------------------------------
-    public func setData() {
+    public func setData(indexPath: IndexPath) {
 
     }
     

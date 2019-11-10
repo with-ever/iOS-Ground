@@ -91,7 +91,7 @@ extension MainHomeViewController: CommonFilterDelegate {
 ///----------------------------------------------------
 extension MainHomeViewController: PostingTextDelegate, PostingImageDelegate {
     func actionPostingDetail(indexPath: IndexPath) {
-        self.view.makeToast("포스팅 상세")
+        pushView(storyBoard: "PostingDetail", viewControllerName: "PostingDetailViewController")
     }
     
     func actionLike(indexPath: IndexPath) {

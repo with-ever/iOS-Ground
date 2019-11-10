@@ -8,17 +8,45 @@
 
 import UIKit
 
+let CELL_POSTING_DETAIL_TITLE = "PostingDetailTitleTableViewCell"
+
 class PostingDetailTitleTableViewCell: BaseTableViewCell {
 
+    // MARK: views
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelCompanyName: UILabel!
+    @IBOutlet weak var labelUserName: UILabel!
+    
+    // MARK: variable
+    private var indexPath: IndexPath!
+    
+    // MARK: delegate
+    
+    
+    ///----------------------------------------------------
+    /// Initialize
+    ///----------------------------------------------------
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        initLanguage()
+        initLayout()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    private func initLanguage() {
+        
     }
-
+    
+    private func initLayout() {
+        
+    }
+    
+    
+    ///----------------------------------------------------
+    /// Data
+    ///----------------------------------------------------
+    public func setData(indexPath: IndexPath) {
+        labelTitle.text = "타이틀"
+        labelCompanyName.text = "회사 이름"
+        labelUserName.text = "사용자 이름"
+    }
 }

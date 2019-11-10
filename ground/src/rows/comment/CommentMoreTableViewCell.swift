@@ -1,29 +1,29 @@
 //
-//  CommentTableViewCell.swift
+//  CommentMoreTableViewCell.swift
 //  ground
 //
-//  Created by TED on 2019/11/08.
+//  Created by TED on 2019/11/10.
 //  Copyright © 2019 WithEver. All rights reserved.
 //
 
 import UIKit
 
-let CELL_COMMENT = "CommentTableViewCell"
+let CELL_COMMENT_MORE = "CommentMoreTableViewCell"
 
-class CommentTableViewCell: BaseTableViewCell {
+protocol CommentMoreDelegate {
+    func actionCommentMore()
+}
+
+class CommentMoreTableViewCell: BaseTableViewCell {
 
     // MARK: views
-    @IBOutlet weak var labelCompanyName: UILabel!
-    @IBOutlet weak var labelUserName: UILabel!
-    @IBOutlet weak var labelCommentDetail: UILabel!
-    @IBOutlet weak var labelLike: UILabel!
-    @IBOutlet weak var labelComment: UILabel!
-    @IBOutlet weak var labelTime: UILabel!
+    @IBOutlet weak var labelMore: TLabel!
     
     // MARK: variable
     private var indexPath: IndexPath!
     
     // MARK: delegate
+    var delegate: CommentMoreDelegate!
     
     ///----------------------------------------------------
     /// Initialize
@@ -47,13 +47,15 @@ class CommentTableViewCell: BaseTableViewCell {
     /// Data
     ///----------------------------------------------------
     public func setData(indexPath: IndexPath, data: CommentVO) {
-        labelCompanyName.text = "회사명"
-        labelUserName.text = "닉네임"
-        labelCommentDetail.text = data.comment
-        
-        labelLike.text = "좋아요 505개"
-        labelComment.text = "댓글"
-        labelTime.text = "3시간"
+        labelMore.text = String.init(format: "이전 댓글 %d개 더 보기..", data.recomment.count)
     }
-        
+
+    
+    ///----------------------------------------------------
+    /// Button action
+    ///----------------------------------------------------
+    @IBAction func actionCommentMore(_ sender: Any) {
+        delegate?.actionCommentMore()
+    }
+    
 }

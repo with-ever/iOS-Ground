@@ -8,12 +8,16 @@
 
 import UIKit
 
-let CELL_RECOMMENT = "RecommentTableViewCell"
+let CELL_RE_COMMENT = "ReCommentTableViewCell"
 
-class RecommentTableViewCell: BaseTableViewCell {
+class ReCommentTableViewCell: BaseTableViewCell {
 
     // MARK: views
-    
+    @IBOutlet weak var labelCompanyName: UILabel!
+    @IBOutlet weak var labelUserName: UILabel!
+    @IBOutlet weak var labelCommentDetail: UILabel!
+    @IBOutlet weak var labelLike: UILabel!
+    @IBOutlet weak var labelTime: UILabel!
     
     // MARK: variable
     private var indexPath: IndexPath!
@@ -42,8 +46,13 @@ class RecommentTableViewCell: BaseTableViewCell {
     ///----------------------------------------------------
     /// Data
     ///----------------------------------------------------
-    public func setData() {
-
+    public func setData(indexPath: IndexPath, data: ReCommentVO) {
+        labelCompanyName.text = "회사명"
+        labelUserName.text = "닉네임"
+        labelCommentDetail.text = data.comment
+        
+        labelLike.text = "좋아요 505개"
+        labelTime.text = "3시간"
     }
 
 }
