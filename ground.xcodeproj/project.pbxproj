@@ -92,6 +92,9 @@
 		9FAD930A23780EBF00993883 /* CommentMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FAD930923780EBF00993883 /* CommentMoreTableViewCell.xib */; };
 		9FAD930F2378733F00993883 /* CommentList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAD930E2378733F00993883 /* CommentList.storyboard */; };
 		9FAD93112378735B00993883 /* CommentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAD93102378735B00993883 /* CommentListViewController.swift */; };
+		9FAD9314237880E400993883 /* PostingWriteTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAD9313237880E400993883 /* PostingWriteTitleTableViewCell.swift */; };
+		9FAD9316237880FB00993883 /* PostingWriteCommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAD9315237880FB00993883 /* PostingWriteCommentsTableViewCell.swift */; };
+		9FAD93182378811600993883 /* PostingWriteImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAD93172378811600993883 /* PostingWriteImageTableViewCell.swift */; };
 		9FD3C8CE237480EF00A06AA4 /* DropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3C8CD237480EF00A06AA4 /* DropDownTableViewCell.swift */; };
 		9FD3C8D22374940200A06AA4 /* DropDownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3C8D12374940200A06AA4 /* DropDownView.xib */; };
 		9FF8D68D2361214000D3D0B2 /* GroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D68C2361214000D3D0B2 /* GroundImage.swift */; };
@@ -210,6 +213,9 @@
 		9FAD930923780EBF00993883 /* CommentMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentMoreTableViewCell.xib; sourceTree = "<group>"; };
 		9FAD930E2378733F00993883 /* CommentList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommentList.storyboard; sourceTree = "<group>"; };
 		9FAD93102378735B00993883 /* CommentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListViewController.swift; sourceTree = "<group>"; };
+		9FAD9313237880E400993883 /* PostingWriteTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingWriteTitleTableViewCell.swift; sourceTree = "<group>"; };
+		9FAD9315237880FB00993883 /* PostingWriteCommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingWriteCommentsTableViewCell.swift; sourceTree = "<group>"; };
+		9FAD93172378811600993883 /* PostingWriteImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingWriteImageTableViewCell.swift; sourceTree = "<group>"; };
 		9FD3C8CD237480EF00A06AA4 /* DropDownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownTableViewCell.swift; sourceTree = "<group>"; };
 		9FD3C8D12374940200A06AA4 /* DropDownView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownView.xib; sourceTree = "<group>"; };
 		9FF8D68C2361214000D3D0B2 /* GroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundImage.swift; sourceTree = "<group>"; };
@@ -683,6 +689,7 @@
 		9F9EE84023753CB50068C210 /* postingwrite */ = {
 			isa = PBXGroup;
 			children = (
+				9FAD9312237880CD00993883 /* rows */,
 				9F9EE84223753CC70068C210 /* storyboard */,
 				9F9EE84123753CC00068C210 /* viewcontroller */,
 			);
@@ -819,6 +826,16 @@
 				9FAD930E2378733F00993883 /* CommentList.storyboard */,
 			);
 			path = storyboard;
+			sourceTree = "<group>";
+		};
+		9FAD9312237880CD00993883 /* rows */ = {
+			isa = PBXGroup;
+			children = (
+				9FAD9313237880E400993883 /* PostingWriteTitleTableViewCell.swift */,
+				9FAD9315237880FB00993883 /* PostingWriteCommentsTableViewCell.swift */,
+				9FAD93172378811600993883 /* PostingWriteImageTableViewCell.swift */,
+			);
+			path = rows;
 			sourceTree = "<group>";
 		};
 		9FD3C8CC237480D800A06AA4 /* rows */ = {
@@ -1044,6 +1061,7 @@
 				9FA7F3BB23156AFE0089A2E8 /* SystemUtils.swift in Sources */,
 				9F621A662332E23300A9BD85 /* MainTabBarViewController.swift in Sources */,
 				9FA7F3BD23156AFE0089A2E8 /* JsonUtils.swift in Sources */,
+				9FAD9316237880FB00993883 /* PostingWriteCommentsTableViewCell.swift in Sources */,
 				9FA7F39223156A8E0089A2E8 /* DateExtension.swift in Sources */,
 				9FA7F38D23156A8E0089A2E8 /* EncodableExtension.swift in Sources */,
 				9F621A602332E0EA00A9BD85 /* LaunchScreenViewController.swift in Sources */,
@@ -1068,11 +1086,13 @@
 				9FA7F3AA23156AE80089A2E8 /* UITableViewExtension.swift in Sources */,
 				9FA7F39623156A8E0089A2E8 /* DeviceExtension.swift in Sources */,
 				9FA7F38E23156A8E0089A2E8 /* DoubleExtension.swift in Sources */,
+				9FAD9314237880E400993883 /* PostingWriteTitleTableViewCell.swift in Sources */,
 				9FA7F39323156A8E0089A2E8 /* UserDefaultsExtension.swift in Sources */,
 				9F9EE85123755E710068C210 /* PostingDetailTitleTableViewCell.swift in Sources */,
 				9FA7F38B23156A8E0089A2E8 /* CGFloatExtension.swift in Sources */,
 				9FA7F3C523156B2B0089A2E8 /* TImageView.swift in Sources */,
 				9FA7F39523156A8E0089A2E8 /* URLExtension.swift in Sources */,
+				9FAD93182378811600993883 /* PostingWriteImageTableViewCell.swift in Sources */,
 				9F621A842332E30400A9BD85 /* MainSearchViewController.swift in Sources */,
 				9F9EE85723755EDA0068C210 /* PostingDetailInfoTableViewCell.swift in Sources */,
 				9F621A822332E2FD00A9BD85 /* MainHomeViewController.swift in Sources */,

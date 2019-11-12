@@ -98,7 +98,7 @@ extension MainBookmarkViewController: TNavigationBarDelegate {
 }
 
 
-// MARK - DropDown
+// MARK: DropDown
 ///----------------------------------------------------
 /// DropDownTitleDelegate
 ///----------------------------------------------------
@@ -134,7 +134,7 @@ extension MainBookmarkViewController: DropDownViewDelegate {
 
 
 
-// MARK - TableView
+// MARK: TableView
 ///----------------------------------------------------
 /// TableView - CommonFilterDelegate
 ///----------------------------------------------------
@@ -149,7 +149,7 @@ extension MainBookmarkViewController: CommonFilterDelegate {
 ///----------------------------------------------------
 extension MainBookmarkViewController: PostingTextDelegate, PostingImageDelegate {
     func actionPostingDetail(indexPath: IndexPath) {
-        self.view.makeToast("포스팅 상세")
+        pushView(storyBoard: "PostingDetail", viewControllerName: "PostingDetailViewController")
     }
     
     func actionLike(indexPath: IndexPath) {
